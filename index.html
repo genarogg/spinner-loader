@@ -1,174 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fanal</title>
-<meta
+    <!-- <meta
       property="og:image"
       content="https://fanal.com.mx/images/default-source/fanal/fanal-grahl-min.jpg"
-    />
+    /> -->
     <style>
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        transition: 600ms all ease;
       }
 
       body {
-        background-color: #282828;
+        background-color: #111;
       }
       .spinner {
         position: fixed;
         width: 100%;
         height: 100%;
-        background-color: #0a2d81;
+        background-color: #282828;
 
         display: flex;
         justify-content: center;
         align-items: center;
-        /* bottom: 0; */
         transition: 1000ms ease all;
+        top: -5vh;
+      }
+
+      .spinner .circulo {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+      }
+
+      .spinner .circulo-movimiento {
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        border-bottom: none;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        animation: spinnerOpacity 3s infinite ease;
       }
 
       .spinner img {
-        width: 300px;
+        width: 100px;
         opacity: 1;
+        filter: brightness(15);
 
-        animation: spinnerOpacity 3s infinite ease;
         position: relative;
-        top: -10vh;
       }
 
       @keyframes spinnerOpacity {
-        0% {
-          opacity: 1;
+        from {
+          transform: rotate(0deg);
         }
-
-        50% {
-          opacity: 0.5;
-        }
-
-        100% {
-          opacity: 1;
+        to {
+          transform: rotate(380deg);
         }
       }
     </style>
   </head>
   <body>
     <div class="spinner" id="spinner">
-      <img src="./logo-fanal-v1.png" alt="" />
-    </div>
-    <div class="none">
-      <img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
-        alt=""
-      /><img src="./logo-fanal-v1.png" alt="" /><img
-        src="./logo-fanal-v1.png"
+      <div class="circulo"></div>
+      <div class="circulo-movimiento"></div>
+      <img
+        src="https://genarogg.github.io/link-To-my-brand/img/isotipo.svg"
         alt=""
       />
     </div>
+
     <script>
       window.addEventListener("load", () => {
-        document.getElementById("spinner").style.visibility = "hidden";
-        document.getElementById("spinner").style.opacity = "0";
+        /* Descomentar para quitar el spinner */
+        /* document.getElementById("spinner").style.visibility = "hidden";
+        document.getElementById("spinner").style.opacity = "0"; */
       });
     </script>
   </body>
